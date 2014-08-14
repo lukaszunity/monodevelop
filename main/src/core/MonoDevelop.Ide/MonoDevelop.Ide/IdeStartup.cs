@@ -358,6 +358,9 @@ namespace MonoDevelop.Ide
 					Version.TryParse (key.GetValue (null) as string, out version);
 			}
 
+			location = "C:\\Program Files (x86)\\GtkSharp\\2.12";
+			version = minVersion;
+
 			//TODO: check build version of GTK# dlls in GAC
 			if (version == null || version < minVersion || location == null || !File.Exists (Path.Combine (location, "bin", "libgtk-win32-2.0-0.dll"))) {
 				LoggingService.LogError ("Did not find required GTK# installation");
